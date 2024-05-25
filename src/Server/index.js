@@ -1,4 +1,4 @@
-import app from '../app.js'
+import app from './app.js'
 import {connectDB} from '../Database/db.js'
 import indexroutes from '../Routes/index.routes.js'
 

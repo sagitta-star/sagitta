@@ -1,0 +1,203 @@
+[33mcommit 91f06676621bcf329e9eecb12d410e39e9b8206f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: jair becerril <jair_gabriel_becerril@outlook.com>
+Date:   Thu May 16 11:02:50 2024 -0600
+
+    version 2
+
+[1mdiff --git a/.babelrc b/.babelrc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..963d993[m
+[1m--- /dev/null[m
+[1m+++ b/.babelrc[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m   "presets": [[m
+[32m+[m[32m    "@babel/preset-env"[m
+[32m+[m[32m   ][m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3c3629e[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mnode_modules[m
+[1mdiff --git a/client/-n b/client/-n[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c189a4a[m
+[1m--- /dev/null[m
+[1m+++ b/client/-n[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m/** @type {import('tailwindcss').Config} */[m
+[32m+[m[32mexport default {[m
+[32m+[m[32m  content: [],[m
+[32m+[m[32m  theme: {[m
+[32m+[m[32m    extend: {},[m
+[32m+[m[32m  },[m
+[32m+[m[32m  plugins: [],[m
+[32m+[m[32m}[m
+[32m+[m
+[1mdiff --git a/client/.eslintrc.cjs b/client/.eslintrc.cjs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4dcb439[m
+[1m--- /dev/null[m
+[1m+++ b/client/.eslintrc.cjs[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32mmodule.exports = {[m
+[32m+[m[32m  root: true,[m
+[32m+[m[32m  env: { browser: true, es2020: true },[m
+[32m+[m[32m  extends: [[m
+[32m+[m[32m    'eslint:recommended',[m
+[32m+[m[32m    'plugin:react/recommended',[m
+[32m+[m[32m    'plugin:react/jsx-runtime',[m
+[32m+[m[32m    'plugin:react-hooks/recommended',[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  ignorePatterns: ['dist', '.eslintrc.cjs'],[m
+[32m+[m[32m  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },[m
+[32m+[m[32m  settings: { react: { version: '18.2' } },[m
+[32m+[m[32m  plugins: ['react-refresh'],[m
+[32m+[m[32m  rules: {[m
+[32m+[m[32m    'react-refresh/only-export-components': [[m
+[32m+[m[32m      'warn',[m
+[32m+[m[32m      { allowConstantExport: true },[m
+[32m+[m[32m    ],[m
+[32m+[m[32m  },[m
+[32m+[m[32m}[m
+[1mdiff --git a/client/.gitignore b/client/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a547bf3[m
+[1m--- /dev/null[m
+[1m+++ b/client/.gitignore[m
+[36m@@ -0,0 +1,24 @@[m
+[32m+[m[32m# Logs[m
+[32m+[m[32mlogs[m
+[32m+[m[32m*.log[m
+[32m+[m[32mnpm-debug.log*[m
+[32m+[m[32myarn-debug.log*[m
+[32m+[m[32myarn-error.log*[m
+[32m+[m[32mpnpm-debug.log*[m
+[32m+[m[32mlerna-debug.log*[m
+[32m+[m
+[32m+[m[32mnode_modules[m
+[32m+[m[32mdist[m
+[32m+[m[32mdist-ssr[m
+[32m+[m[32m*.local[m
+[32m+[m
+[32m+[m[32m# Editor directories and files[m
+[32m+[m[32m.vscode/*[m
+[32m+[m[32m!.vscode/extensions.json[m
+[32m+[m[32m.idea[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32m*.suo[m
+[32m+[m[32m*.ntvs*[m
+[32m+[m[32m*.njsproj[m
+[32m+[m[32m*.sln[m
+[32m+[m[32m*.sw?[m
+[1mdiff --git a/client/README.md b/client/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f768e33[m
+[1m--- /dev/null[m
+[1m+++ b/client/README.md[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m# React + Vite[m
+[32m+[m
+[32m+[m[32mThis template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.[m
+[32m+[m
+[32m+[m[32mCurrently, two official plugins are available:[m
+[32m+[m
+[32m+[m[32m- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh[m
+[32m+[m[32m- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh[m
+[1mdiff --git a/client/index.html b/client/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6aa1ec4[m
+[1m--- /dev/null[m
+[1m+++ b/client/index.html[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32m<!doctype html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <link rel="stylesheet" href="index.css">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m    <title>Sagitta</title>[m
+[32m+[m[32m  </head>[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <div id="root"></div>[m
+[32m+[m[32m    <script type="module" src="/src/main.jsx"></script>[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/client/package-lock.json b/client/package-lock.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..459d299[m
+[1m--- /dev/null[m
+[1m+++ b/client/package-lock.json[m
+[36m@@ -0,0 +1,5355 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "name": "client",[m
+[32m+[m[32m  "version": "0.0.0",[m
+[32m+[m[32m  "lockfileVersion": 3,[m
+[32m+[m[32m  "requires": true,[m
+[32m+[m[32m  "packages": {[m
+[32m+[m[32m    "": {[m
+[32m+[m[32m      "name": "client",[m
+[32m+[m[32m      "version": "0.0.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "axios": "^1.6.8",[m
+[32m+[m[32m        "js-cookie": "^3.0.5",[m
+[32m+[m[32m        "react": "^18.2.0",[m
+[32m+[m[32m        "react-dom": "^18.2.0",[m
+[32m+[m[32m        "react-hook-form": "^7.51.2",[m
+[32m+[m[32m        "react-router-dom": "^6.22.3",[m
+[32m+[m[32m        "socket.io-client": "^4.7.5"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "devDependencies": {[m
+[32m+[m[32m        "@types/react": "^18.2.43",[m
+[32m+[m[32m        "@types/react-dom": "^18.2.17",[m
+[32m+[m[32m        "@vitejs/plugin-react": "^4.2.1",[m
+[32m+[m[32m        "autoprefixer": "^10.4.19",[m
+[32m+[m[32m        "eslint": "^8.55.0",[m
+[32m+[m[32m        "eslint-plugin-react": "^7.33.2",[m
+[32m+[m[32m        "eslint-plugin-react-hooks": "^4.6.0",[m
+[32m+[m[32m        "eslint-plugin-react-refresh": "^0.4.5",[m
+[32m+[m[32m        "postcss": "^8.4.38",[m
+[32m+[m[32m        "tailwindcss": "^3.4.1",[m
+[32m+[m[32m        "vite": "^5.0.8"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aashutoshrathi/word-wrap": {[m
+[32m+[m[32m      "version": "1.2.6",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz",[m
+[32m+[m[32m      "integrity": "sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=0.10.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@alloc/quick-lru": {[m
+[32m+[m[32m      "version": "5.2.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=10"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "url": "https://github.com/sponsors/sindresorhus"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@ampproject/remapping": {[m
+[32m+[m[32m      "version": "2.2.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.2.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@jridgewell/gen-mapping": "^0.3.0",[m
+[32m+[m[32m        "@jridgewell/trace-mapping": "^0.3.9"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=6.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@babel/code-frame": {[m
+[32m+[m[32m      "versio

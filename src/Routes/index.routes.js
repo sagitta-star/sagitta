@@ -7,4 +7,4 @@ router.get("/", (req, res) => {
     res.send("hola mundo");
 });
 
-export default router;
+export default Router;

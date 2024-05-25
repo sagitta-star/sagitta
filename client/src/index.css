@@ -1,3 +1,18 @@
+:root{
+    font-family:  inherit , Arial, Helvetica, sans-serif, ; 
+    color-scheme: light dark; 
+    justify-content: center;
+    text-align: center;
+color:aqua;
+flex: auto;
+
+
+font-synthesis: none; 
+text-rendering: optimizeLegibility; 
+    
+}
+
+
 
 @tailwind base;
 @tailwind components;

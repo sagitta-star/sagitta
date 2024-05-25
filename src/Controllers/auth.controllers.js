@@ -21,6 +21,14 @@ const passwordhash = await bcrypt.hash(password, 10 )
         username,
         email,
         password: passwordhash,
+        nombre, 
+        Colonia,
+Escuela,
+Empleo,
+Edad,
+Pais,
+Estado,
+Municipio
     
     })
     console.log(newuser)
@@ -35,6 +43,14 @@ const passwordhash = await bcrypt.hash(password, 10 )
        email: userSaved.email,
         createdAt: userSaved.createdAt,
           updatedAt: userSaved.updatedAt,
+          nombre: userSaved.nombre, 
+          Colonia: userSaved.colonia, 
+          Escuela: userSaved.Escuela,
+          Empleo: userSaved.Empleo,
+          Edad: userSaved.Edad,
+          Pais: userSaved.Pais,
+          Estado: userSaved.Estado,
+          Municipio: userSaved.Municipio 
          } );
    
 
@@ -100,6 +116,14 @@ export const profile  = async (req, res) => {
         email: userfound.email,
         createdAt: userfound.createdAt,
      updatedAt: userfound.updatedAt,
+     Colonia: userfound.colonia, 
+     nombre: userfound.nombre, 
+          Escuela: userfound.Escuela,
+          Empleo: userfound.Empleo,
+          Edad: userfound.Edad,
+          Pais: userfound.Pais,
+          Estado: userfound.Estado,
+          Municipio: userfound.Municipio 
     })
 }
     
